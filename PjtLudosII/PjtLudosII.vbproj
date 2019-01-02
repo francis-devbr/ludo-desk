@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9422E3B7-5486-4635-BB32-528100853FF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PjtLudosII.My.MyApplication</StartupObject>
+    <RootNamespace>PjtLudosII</RootNamespace>
+    <AssemblyName>PjtLudosII</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PjtLudosII.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PjtLudosII.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Pad.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NumericBox">
+      <HintPath>..\..\..\..\..\NumericBox.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\frmCadastro.Designer.vb">
+      <DependentUpon>frmCadastro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadastro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInput.Designer.vb">
+      <DependentUpon>frmInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classe\Global\cldBD.vb" />
+    <Compile Include="Classe\Global\cldSistema.vb" />
+    <Compile Include="Classe\Negocio\clnDetPDV.vb" />
+    <Compile Include="Classe\Negocio\clnFuncionario.vb" />
+    <Compile Include="Classe\Negocio\clnFuncoesGerais.vb" />
+    <Compile Include="Classe\Negocio\clnCliente.vb" />
+    <Compile Include="Classe\Negocio\clnFornecedor.vb" />
+    <Compile Include="Classe\Negocio\clnMovEst.vb" />
+    <Compile Include="Classe\Negocio\clnPDV.vb" />
+    <Compile Include="Classe\Negocio\clnProduto.vb" />
+    <Compile Include="Classe\Negocio\clnTransportadora.vb" />
+    <Compile Include="Classe\Negocio\clnPedCompra.vb" />
+    <Compile Include="Classe\Negocio\clnDetPedCompra.vb" />
+    <Compile Include="Forms\frmPCPF.Designer.vb">
+      <DependentUpon>frmPCPF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPCPF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadCep.Designer.vb">
+      <DependentUpon>frmCadCep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadCep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadUser.Designer.vb">
+      <DependentUpon>frmCadUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFuncionario.Designer.vb">
+      <DependentUpon>frmFuncionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFornecedor.Designer.vb">
+      <DependentUpon>frmFornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFornecedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProduto.Designer.vb">
+      <DependentUpon>frmProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRecSenhaUser.Designer.vb">
+      <DependentUpon>frmRecSenhaUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRecSenhaUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransportadora.Designer.vb">
+      <DependentUpon>frmTransportadora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransportadora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPedido.Designer.vb">
+      <DependentUpon>frmPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEstoque.Designer.vb">
+      <DependentUpon>frmEstoque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEstoque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPedidoCompra.Designer.vb">
+      <DependentUpon>frmPedidoCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPedidoCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPCNPJ.Designer.vb">
+      <DependentUpon>frmPCNPJ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPCNPJ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classe\Global\mdlAuxiliar.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmCadastro.resx">
+      <DependentUpon>frmCadastro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInput.resx">
+      <DependentUpon>frmInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPCPF.resx">
+      <DependentUpon>frmPCPF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadCep.resx">
+      <DependentUpon>frmCadCep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadUser.resx">
+      <DependentUpon>frmCadUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProduto.resx">
+      <DependentUpon>frmProduto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRecSenhaUser.resx">
+      <DependentUpon>frmRecSenhaUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransportadora.resx">
+      <DependentUpon>frmTransportadora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPedido.resx">
+      <DependentUpon>frmPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEstoque.resx">
+      <DependentUpon>frmEstoque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPedidoCompra.resx">
+      <DependentUpon>frmPedidoCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPCNPJ.resx">
+      <DependentUpon>frmPCNPJ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAcessar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lblAcessar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAcessar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lblCategoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSair2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgcads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela_Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Log Off-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows-Turn-Off-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Preppy Green-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIniciar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIniciar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdvin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoquein.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rpt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clienteIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtoIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedorIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_female_users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shut_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\console2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Console_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boite_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pad_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_business_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_business_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept_business_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixa_icon_by_igorbessa-d47hg0p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1338653367_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows_restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_globe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portfolio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_basket_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_accept1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
